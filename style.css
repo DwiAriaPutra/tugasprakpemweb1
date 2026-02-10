@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to Right, #0f172a, #19273b);
+    color: #f8f9fa;
+    transition: 0.5s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    background: rgba(#0f172a, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f8f9fa;
+    font-weight: 500;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.home h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.putra {
+    color: #527f94;
+}
+
+.btn-sini {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #01496b;
+    color:white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.teks-home {
+    padding: 3px;
+}
+
+.home-image img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section {
+    height: 100vh;
+    padding: 100px 10%;
+    text-align: center;
+
+}
+
+.wadah {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.list-item {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    background:#01496b;
+    height: 100px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.list-projek {
+    display: inline-block;
+    padding: 10px 20px;
+    background:#01496b;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.list-medsos {
+    display: inline-block;
+    padding: 10px 20px;
+    background:#01496b;
+    color: white;
+    margin: 7px;
+    border-radius: 10px;
+    text-decoration: none;
+}
