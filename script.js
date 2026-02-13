@@ -1,19 +1,3 @@
-const links = document.querySelectorAll('nav a', 'btn-sini')
-
-links.forEach(link => {
-    link.addEventListener('click', function() {
-        const id = this.getAttribute('href');
-        const targetSection = document.querySelector(id);
-        const title = targetSection.querySelector('.judul');
-
-        title.classList.remove('show');
-
-        setTimeout(() => {
-            title.classList.add('show');
-        }, 300);
-    });
-});
-
 const scripURL = 'https://script.google.com/macros/s/AKfycbyq1qaj83coMtAeyasDFxybqTOcIlkRsUd9lkitOQ5wDEFHKa3WwPD2-RzGxEQ_ow8zQg/exec';
 
 const form = document.getElementById('contactForm');
