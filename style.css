@@ -110,19 +110,6 @@ section {
 
 }
 
-.judul {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s ease;
-    position: sticky;
-    top: 10px;
-}
-
-.judul.show {
-    opacity: 0;
-    transform: translateY(40px 0);
-}
-
 .wadah {
     display: flex;
     gap: 20px;
