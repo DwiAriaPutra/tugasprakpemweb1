@@ -48,10 +48,6 @@ nav a {
     margin-bottom: 20px;
 }
 
-.putra {
-    color: #527f94;
-}
-
 .btn-sini {
     display: inline-block;
     padding: 15px 30px;
@@ -60,7 +56,40 @@ nav a {
     text-decoration: none;
     border-radius: 50px;
     margin-top: 20px;
-    transition: 0.3s;
+
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-sini::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #19273b, white, #0f172a, #01496b);
+    background-size: 300% 300%;
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            opacity: 0;
+            transition: opacity 0.3s ease;
+}
+
+.btn-sini:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 4);
+}
+
+.btn-sini:hover::before {
+    opacity: 1;
+    animation: borderMove 3s linear infinite;
 }
 
 .teks-home {
@@ -79,6 +108,19 @@ section {
     padding: 100px 10%;
     text-align: center;
 
+}
+
+.judul {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s ease;
+    position: sticky;
+    top: 10px;
+}
+
+.judul.show {
+    opacity: 0;
+    transform: translateY(40px 0);
 }
 
 .wadah {
@@ -105,6 +147,49 @@ section {
     width: 150px;
     text-align: center;
     border-radius: 10px;
+
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.list-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #19273b, white, #0f172a, #01496b);
+    background-size: 300% 300%;
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            opacity: 0;
+            transition: opacity 0.3s ease;
+}
+
+.list-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 4);
+}
+
+.list-item:hover::before {
+    opacity: 1;
+    animation: borderMove 3s linear infinite;
+}
+
+@keyframes borderMove {
+    0%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 300% 50%;
+    }
 }
 
 .list-projek {
@@ -114,7 +199,42 @@ section {
     height: 200px;
     width: 200px;
     border-radius: 10px;
+
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
 }
+
+.list-projek::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #19273b, white, #0f172a, #01496b);
+    background-size: 300% 300%;
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            opacity: 0;
+            transition: opacity 0.3s ease;
+}
+
+.list-projek:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 4);
+}
+
+.list-projek:hover::before {
+    opacity: 1;
+    animation: borderMove 3s linear infinite;
+}
+
 
 .list-medsos {
     display: inline-block;
@@ -124,4 +244,103 @@ section {
     margin: 7px;
     border-radius: 10px;
     text-decoration: none;
+
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.list-medsos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #19273b, white, #0f172a, #01496b);
+    background-size: 300% 300%;
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            opacity: 0;
+            transition: opacity 0.3s ease;
+}
+
+.list-medsos:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 4);
+}
+
+.list-medsos:hover::before {
+    opacity: 1;
+    animation: borderMove 3s linear infinite;
+}
+
+.pesan {
+    font-family: monospace;
+    color: white;
+    background: fixed;
+    background-color: #19273b;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input, textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #01496b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #19273b, white, #0f172a, #01496b);
+    background-size: 300% 300%;
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            opacity: 0;
+            transition: opacity 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 4);
+}
+
+button:hover::before {
+    opacity: 1;
+    animation: borderMove 3s linear infinite;
 }
