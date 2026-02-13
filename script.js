@@ -1,4 +1,5 @@
-const scripURL = 'https://script.google.com/macros/s/AKfycbyq1qaj83coMtAeyasDFxybqTOcIlkRsUd9lkitOQ5wDEFHKa3WwPD2-RzGxEQ_ow8zQg/exec';
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycby7Iq1Yi8oB9iQJH1GUUnqCQ7_gNPK63z_ZNBKN7xjPTBSvV8A65_vSC4m6IW-JC8BOuw/exec';
 
 const form = document.getElementById('contactForm');
 const responseMessage = document.getElementById('responseMessage');
@@ -6,7 +7,7 @@ const responseMessage = document.getElementById('responseMessage');
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    fetch(scripURL, {
+    fetch(scriptURL, {
         method: 'POST',
         body: new FormData(form)
     })
